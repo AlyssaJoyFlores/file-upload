@@ -10,8 +10,7 @@ const {
     uploadProductImageLocal
 } = require('../controllers/uploadController')
 
-router.route('/getAllProducts').get(getAllProducts)
-router.route('/addProduct').post(addProduct)
+router.route('/').get(getAllProducts).post(addProduct)
 router.route('/uploads').post(uploadProductImageLocal)
 
 module.exports = router;

@@ -32,6 +32,7 @@ const errorHandlerMiddleware = require('./middleware/error-handler')
 server.use(cors())
 server.use(express.static('./uploads'))
 server.use(express.json());
+server.use(express.urlencoded({ extended: true}))
 server.use(fileUpload({useTempFiles:true}));
 
 // router
